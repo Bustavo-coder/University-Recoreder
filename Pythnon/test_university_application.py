@@ -40,12 +40,12 @@ class TestFunctionDisplayStudentInfo(unittest.TestCase):
 	def test_function_display_students(self):
 		name = {"ade" : {"age":"20","gender":"male",}}
 		result = university_record.display_students_record(name)
-		self.assertEqual(result , "Succesfully Displayed")
+		self.assertEqual(result , "Successfully Displayed")
 class TestFunctionDisplayStudentCourses(unittest.TestCase):
 	def test_function_display_courses(self):
 		name = {"ade" : {"age":"20","courses":"law",}}
 		result = university_record.display_students_course(name)
-		self.assertEqual(result , "Succesfully Displayed")
+		self.assertEqual(result , "Successfully Displayed")
 class TestFunctionCreateDictStudentAddres(unittest.TestCase):
 	def test_that_create_dict_is_return_result(self):
 		result = university_record.create_dict_student_address()
@@ -54,21 +54,21 @@ class TestFunctionDisplayZipCode(unittest.TestCase):
 	def test_postal_codes(self):
 		name = {"ade" : {"age":"20","courses":"law", "Addres" :{"postal code" : 00000}}}
 		result = university_record.display_zip_code_of_student(name)
-		self.assertEqual(result , "Succesfully Displayed")
+		self.assertEqual(result , "Successfully Displayed")
 class TestFunctionAddNewCourse(unittest.TestCase):
 	def test_function_add_new_course(self):
 		name = {"ade" :{"courses":{"law","maths"}}}
 		result =  university_record.add_new_course(name)
-		self.assertEqual(result ,"SuccesFull" )
+		self.assertEqual(result ,"Successfully Displayed" )
 class TestFunctionRemoveUpdateCourse(unittest.TestCase):
 	def test_function_remove_course(self):
 		name = {"ade" :{"courses":{"law","maths"}}}
 		result =  university_record.remove_course_update(name)
-		self.assertEqual(result ,"Succesful")
+		self.assertEqual(result ,"Successfully Displayed")
 class TestFunctionUpdateStudentFields(unittest.TestCase):
 	def test_function_updates_students_field(self):
 		name = {"ade": {"students_name" : "Faruq", "students_age": 20, "courses":"English" ,"Addres" : "Yaba"}}
 		result = university_record.update_students_fields(name)
 		print(name)
-		self.assertEqual(result ,"SuccesFul")
+		self.assertEqual(result ,"Successfully Displayed")
 		
