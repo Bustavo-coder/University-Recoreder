@@ -1,0 +1,31 @@
+def menu():
+	welcome_message = """		
+					Bright University Where The Future Is 
+				Block 19,100 Carrington Manchester United Kingdom
+						+124-912_112_1222
+				1.>>>>>>> To Display Sub-Menu
+		============================================================================="""
+	return welcome_message
+def sub_menu():
+	sub_menu = """ 
+		1.>>>>>>> Register New Students
+		2.>>>>>> Display Student Portfolio
+		3.>>>>>> Display Zip Code 
+		4.>>>>>> Display Student Addres
+		5.>>>>>> Add New Course
+		6.>>>>> Update Student Fields
+		7.>>>>>	Remove Courses
+		8.>>>> Display All Students PortFolio
+		9.>>>>> Display Courses
+		0.>>>>> To Exit
+		00.>>> To Go Back To Menu"""
+	return sub_menu 
+
+def main():
+	print(menu())
+	while(True):
+		menu_input = digit_input("Press 1 to display Menu\n")
+		print(sub_menu())
+		sub_menu_input = digit_input("Press To Display Menu\n")	
+		break
+main()
