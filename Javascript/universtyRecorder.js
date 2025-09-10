@@ -7,6 +7,9 @@ const userPrompt = (promptMessage) => {
 const failedResponse = () => {
   return "Student UserName Is Invalid";
 };
+const emptyDatabaseRespnse = () => {
+  return "Student Portal Is currently Closed";
+};
 const studentDatabase = new Object();
 const course = [
   "math",
@@ -147,8 +150,8 @@ function studentsAddNewCourse(dataBase) {
     "Enter Your Students userNmae to Display Portfolio  "
   );
   if (dataBase.hasOwnProperty(userName)) {
-    let userCourse = userPrompt("Enter The course You want to add ");
     while (true) {
+      let userCourse = userPrompt("Enter The course You want to add ");
       if (
         course.includes(userCourse) &&
         !dataBase[userName]["Courses"].includes(userCourse)
@@ -226,7 +229,7 @@ function displaysubMenu() {
 		00.>>> To Go Back To Menu`;
   return submenu;
 }
-
+const isgreater = () => Object.keys(studentDatabase).length === 0;
 function main() {
   console.log(menu());
   while (true) {
@@ -238,28 +241,44 @@ function main() {
         console.log(createStudentObject());
         break;
       case 2:
-        console.log(displayStudentsRecord(studentDatabase));
+        if (isgreater()) {
+          console.log(emptyDatabaseRespnse());
+        } else console.log(displayStudentsRecord(studentDatabase));
         break;
       case 3:
-        console.log(displayStudentZipCode(studentDatabase));
+        if (isgreater()) {
+          console.log(emptyDatabaseRespnse());
+        } else console.log(displayStudentZipCode(studentDatabase));
         break;
       case 4:
-        console.log(displayStudentsCity(studentDatabase));
+        if (isgreater()) {
+          console.log(emptyDatabaseRespnse());
+        } else console.log(displayStudentsCity(studentDatabase));
         break;
       case 5:
-        console.log(studentsAddNewCourse(studentDatabase));
+        if (isgreater()) {
+          console.log(emptyDatabaseRespnse());
+        } else console.log(studentsAddNewCourse(studentDatabase));
         break;
       case 6:
-        console.log(studentsUpdateUserField(studentDatabase));
+        if (isgreater()) {
+          console.log(emptyDatabaseRespnse());
+        } else console.log(studentsUpdateUserField(studentDatabase));
         break;
       case 7:
-        console.log(updatesStudentsCourse(studentDatabase));
+        if (isgreater()) {
+          console.log(emptyDatabaseRespnse());
+        } else console.log(updatesStudentsCourse(studentDatabase));
         break;
       case 8:
-        console.log(displayDatabase(studentDatabase));
+        if (isgreater()) {
+          console.log(emptyDatabaseRespnse());
+        } else console.log(displayDatabase(studentDatabase));
         break;
       case 9:
-        console.log(displayStudentCourse(studentDatabase));
+        if (isgreater()) {
+          console.log(emptyDatabaseRespnse());
+        } else console.log(displayStudentCourse(studentDatabase));
         break;
       case 0:
         console.log("Thank You For Using Our Service");
