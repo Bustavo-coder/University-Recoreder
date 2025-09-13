@@ -25,7 +25,7 @@ public class StudentsCreation{
 	public int getAge(){
 		return age;
 			}
-	public void setCourses(ArrayList<String>courses){
+	public void setCourses(ArrayList<String> courses){
 		this.courses = courses;
 			}
 	public ArrayList getCourse(){
@@ -42,9 +42,11 @@ public class StudentsCreation{
 			}
 	public String getCity(){
 		return city;
-		}
-
-
+		};
+    @Override
+    public String toString(){
+        return String.format("username : %s\n Age : %d\n courses : %s \n Address : %s \n City : %s ",name,age,courses,address,city);
+    }
 	
 
 	}
